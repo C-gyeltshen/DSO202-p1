@@ -1,0 +1,36 @@
+LAST SEEN   TYPE      REASON              OBJECT                                 MESSAGE
+3h5m        Normal    ScalingReplicaSet   deployment/web-deployment              Scaled down replica set web-deployment-ddd46bfd from 1 to 0
+3h5m        Normal    SuccessfulDelete    replicaset/web-deployment-ddd46bfd     Deleted pod: web-deployment-ddd46bfd-pr9z9
+3h2m        Normal    Started             pod/web-deployment-ddd46bfd-pr9z9      Container started
+3h2m        Normal    Killing             pod/web-deployment-ddd46bfd-pr9z9      Stopping container web
+3h2m        Normal    Created             pod/web-deployment-ddd46bfd-pr9z9      Container created
+3h2m        Normal    Pulled              pod/web-deployment-ddd46bfd-pr9z9      Successfully pulled image "nginx:1.31-alpine" in 9m5.513s (9m5.513s including waiting). Image size: 25971031 bytes.
+178m        Normal    SuccessfulCreate    replicaset/web-deployment-67499b7844   Created pod: web-deployment-67499b7844-km5zm
+178m        Normal    Scheduled           pod/web-deployment-67499b7844-km5zm    Successfully assigned dso202-practical-01/web-deployment-67499b7844-km5zm to worker-node-1
+177m        Warning   Failed              pod/web-deployment-67499b7844-km5zm    Failed to pull image "nginx:9.99-does-not-exist": failed to pull and unpack image "docker.io/library/nginx:9.99-does-not-exist": failed to resolve reference "docker.io/library/nginx:9.99-does-not-exist": failed to do request: Head "https://registry-1.docker.io/v2/library/nginx/manifests/9.99-does-not-exist": dial tcp: lookup registry-1.docker.io on 192.168.65.254:53: no such host
+129m        Normal    Pulling             pod/web-deployment-67499b7844-km5zm    Pulling image "nginx:9.99-does-not-exist"
+129m        Warning   Failed              pod/web-deployment-67499b7844-km5zm    Error: ErrImagePull
+129m        Warning   Failed              pod/web-deployment-67499b7844-km5zm    Failed to pull image "nginx:9.99-does-not-exist": rpc error: code = DeadlineExceeded desc = failed to pull and unpack image "docker.io/library/nginx:9.99-does-not-exist": failed to resolve reference "docker.io/library/nginx:9.99-does-not-exist": failed to do request: Head "https://registry-1.docker.io/v2/library/nginx/manifests/9.99-does-not-exist": dial tcp 44.216.61.249:443: i/o timeout
+34m         Warning   Failed              pod/web-deployment-67499b7844-km5zm    Error: ImagePullBackOff
+34m         Normal    BackOff             pod/web-deployment-67499b7844-km5zm    Back-off pulling image "nginx:9.99-does-not-exist"
+31m         Normal    SuccessfulDelete    replicaset/web-deployment-67499b7844   Deleted pod: web-deployment-67499b7844-km5zm
+27m         Normal    Scheduled           pod/web-deployment-67499b7844-pqm2h    Successfully assigned dso202-practical-01/web-deployment-67499b7844-pqm2h to worker-node-2
+27m         Normal    ScalingReplicaSet   deployment/web-deployment              Scaled up replica set web-deployment-67499b7844 from 0 to 1
+27m         Normal    SuccessfulCreate    replicaset/web-deployment-67499b7844   Created pod: web-deployment-67499b7844-pqm2h
+27m         Normal    Pulling             pod/web-deployment-67499b7844-pqm2h    Pulling image "nginx:9.99-does-not-exist"
+26m         Warning   Failed              pod/web-deployment-67499b7844-pqm2h    Failed to pull image "nginx:9.99-does-not-exist": rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/nginx:9.99-does-not-exist": failed to resolve reference "docker.io/library/nginx:9.99-does-not-exist": docker.io/library/nginx:9.99-does-not-exist: not found
+26m         Warning   Failed              pod/web-deployment-67499b7844-pqm2h    Error: ErrImagePull
+26m         Normal    BackOff             pod/web-deployment-67499b7844-pqm2h    Back-off pulling image "nginx:9.99-does-not-exist"
+26m         Warning   Failed              pod/web-deployment-67499b7844-pqm2h    Error: ImagePullBackOff
+26m         Normal    ScalingReplicaSet   deployment/web-deployment              Scaled down replica set web-deployment-67499b7844 from 1 to 0
+26m         Normal    Killing             pod/web-deployment-76ddf5fcf9-jhhhk    Stopping container web
+26m         Normal    SuccessfulDelete    replicaset/web-deployment-76ddf5fcf9   Deleted pod: web-deployment-76ddf5fcf9-58dfp
+26m         Normal    SuccessfulDelete    replicaset/web-deployment-76ddf5fcf9   Deleted pod: web-deployment-76ddf5fcf9-jhhhk
+26m         Normal    SuccessfulDelete    replicaset/web-deployment-67499b7844   Deleted pod: web-deployment-67499b7844-pqm2h
+26m         Normal    Killing             pod/web-deployment-76ddf5fcf9-58dfp    Stopping container web
+26m         Normal    ScalingReplicaSet   deployment/web-deployment              Scaled down replica set web-deployment-76ddf5fcf9 from 5 to 3
+20m         Normal    Scheduled           pod/client-pod                         Successfully assigned dso202-practical-01/client-pod to worker-node-2
+20m         Normal    Pulling             pod/client-pod                         Pulling image "busybox:1.37"
+20m         Normal    Pulled              pod/client-pod                         Successfully pulled image "busybox:1.37" in 16.155s (16.155s including waiting). Image size: 1911349 bytes.
+20m         Normal    Created             pod/client-pod                         Container created
+20m         Normal    Started             pod/client-pod                         Container started
